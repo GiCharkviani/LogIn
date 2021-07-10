@@ -1,0 +1,303 @@
+body {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #16222C!important;
+    justify-content: center;
+    align-items: center;
+    color: azure!important;
+    cursor: context-menu;
+}
+
+.pic{
+    display: flex;
+    grid-area: 1/1/1/1;
+    width: 100%;
+    height: 60vh;
+    justify-content: flex-end!important;
+    align-items: center!important;
+}
+
+
+.pic img{
+    margin-right: 50px;;
+}
+
+h2{
+    margin-bottom: 25px!important;
+    font-size: 1em!important;
+}
+.logIn{
+    grid-area: 1/2/1/2;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #5FA7F0;
+}
+
+@media only screen and (max-width:1158px){
+    .pic{
+        display: none;
+    }
+    .logIn{
+        grid-area: 1/1/1/2!important;
+        border: none;
+    }
+}
+.logIn #form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left:100px;
+   
+}
+
+
+#user{
+    width: 350px;
+    margin-bottom: 25px;
+    height: 48px;
+    border-radius: 3px;
+    border: 1px solid #5FA7F0;
+    background-color:#16222C;
+    outline: none;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+    margin-top: 50px;
+    opacity: 0;
+}
+#password{
+    width: 310px;
+    height: 48px;
+    border-radius: 3px;
+    background-color:#16222C;
+    outline: none;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+    border: none;
+}
+
+.password{
+    display: flex;
+    align-items: center;
+    border: 1px solid #5FA7F0;
+    border-radius: 3px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    opacity: 0;
+}
+.icon{
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#icon2{
+    display: none;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    color:#5FA7F0;
+}
+small{
+    display: none;
+}
+
+input:focus{
+    border-color: white!important;
+}
+
+input[type=password]:focus .password{
+    border-color: white!important;
+}
+
+
+input[type=text]::placeholder, input[type=password]::placeholder{
+    color: #FFFFFF;
+}
+.check{
+    font-size: 0.8em!important;
+    margin-top: 50px;
+    opacity: 0;
+}
+.check a {
+    float:right;
+}
+
+input[type=checkbox]{
+    margin-right: 5px;
+}
+
+input[type=checkbox]::before{
+    content: "";
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-color: grey;
+}
+input[type=checkbox]:checked:before{
+    background-color: #2987E7;
+    content: '✓';
+    color: #FFFFFF;
+    display: flex;
+}
+
+select{
+    margin-top: 10px;
+    color:#FFFFFF;
+    width: 100px;
+    margin-bottom: 25px;
+    height: 48px;
+    border-radius: 3px;
+    border: 1px solid #5FA7F0;
+    background-color:#16222C;
+    padding-left:5px;
+    outline: none;
+}
+
+.selection{
+    margin-top: 50px;
+    opacity: 0;
+}
+
+.selection i{
+   color: #5FA7F0;
+   margin-left: 10px;
+   cursor: pointer;
+}
+i:hover .tooltipText{
+    visibility: visible;
+}
+a:hover{
+    color: whitesmoke!important;
+}
+.tooltipText{
+    visibility: hidden;
+    font-size: 0.4em;
+    position: fixed;
+    top: 48%;
+    right: 15%;
+    width: 200px;
+    height: 83px;
+    word-wrap: break-word;
+    z-index: 1;
+    background-color:#08121a!important;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+.button{
+    margin-top: 10px;
+    background-color:#F50051;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-top: 50px;
+    opacity: 0;
+}
+
+
+.logIn #forgot{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left:100px;
+}
+#forgot input {
+    width: 350px;
+    margin-bottom: 25px;
+    height: 48px;
+    border-radius: 3px;
+    border: 1px solid #5FA7F0;
+    background-color:#16222C;
+    outline: none;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+#forgot1{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left:100px;
+}
+input[type=radio]{
+    appearance: none;
+    cursor: pointer;
+}
+input[type=radio] + label{
+    margin-right: 15px;
+    cursor: pointer;
+}
+input[type=radio]::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    background-color: #16222C;
+    display: block;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+input[type=radio]:checked::before{
+    background-color: #5FA7F0;
+}
+#smsSent{
+    display: none;
+    flex-wrap: wrap;
+    margin-left:100px;
+    flex-direction: column;
+}
+#smsSent input{
+    width: 350px;
+    margin-bottom: 25px;
+    height: 48px;
+    border-radius: 3px;
+    border: 1px solid #5FA7F0;
+    background-color:#16222C;
+    outline: none;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
+#smsSent button{
+    width: 91%;
+}
+.iconInfo:hover .tooltipText1{
+    visibility: visible;
+}
+.iconInfo{
+    color: #5FA7F0;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.tooltipText1{
+    visibility: hidden;
+    font-size: 0.5em;
+    position: fixed;
+    top: 48%;
+    right: 15%;
+    width: 150px;
+    height: 83px;
+    word-wrap: break-word;
+    z-index: 1;
+    background-color:#08121a!important;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
