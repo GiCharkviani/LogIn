@@ -231,11 +231,18 @@ a:hover{
 }
 
 #forgot1{
+    width: 310px;
     display: none;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left:100px;
 }
+
+#send{
+    display: block;
+    margin-top: 10px!important;
+}
+
 input[type=radio]{
     appearance: none;
     cursor: pointer;
